@@ -43,5 +43,5 @@ def home():
     return "Python Tutor Backend (Gemini) is running!"
 
 if __name__ == "__main__":
-    # Run the Flask app
-    app.run(debug=True)
+    # Bind Flask to 0.0.0.0 and specify the port (usually 5000)
+    app.run(host='0.0.0.0', port=int(os.getenv("PORT", 5000)))
